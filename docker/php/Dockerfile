@@ -38,7 +38,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/project
 
 # 소스 코드 복사
-COPY ./src .
+COPY laravel .
 
 # Laravel 의존성 설치
 RUN composer install --no-dev --optimize-autoloader --no-interaction
